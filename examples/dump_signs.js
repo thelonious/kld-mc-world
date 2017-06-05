@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 let path = require('path'),
-    Map = require('./index'),
+    Map = require('../index'),
     World = Map.World,
     Region = Map.Region,
     printTag = require('kld-nbt').printTag;
@@ -50,7 +50,6 @@ let regions = [
     { x:  3, z:  1 },
     { x:  3, z:  2 }
 ];
-  
 
 // build "saves" directory for macOS user
 let saves = path.join(process.env["HOME"], "Library", "Application Support", "minecraft", "saves");
