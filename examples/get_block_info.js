@@ -12,7 +12,7 @@ let world = new World(worldPath);
 let position = { x: 119, y: 62, z: 118 };
 let region = world.getRegion(position);
 let chunk = region.getChunkContainingPosition(position);
-let blockType = chunk.getBlockType(position);
+let blockType = chunk.getBlockInfo(position);
 
 // printTag(chunk.data);
 console.log(blockType);
