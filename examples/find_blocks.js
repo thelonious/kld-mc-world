@@ -10,12 +10,8 @@ let worldName = "Forge Lucky Block";
 let world = new World(path.join(saves, worldName));
 let blockInfo = BlockInfo.findDescription("Gold Block");
 
-for (let region of world.getRegions()) {
-    console.log(region.xz);
-
-    for (let blockType of region.getBlockInfos()) {
-        if (blockType.type === blockInfo.type && blockType.data === blockInfo.data) {
-            console.log(JSON.stringify(blockType));
-        }
+for (let blockType of world.getBlockInfos()) {
+    if (blockType.type === blockInfo.type && blockType.data === blockInfo.data) {
+        console.log(JSON.stringify(blockType));
     }
 }
