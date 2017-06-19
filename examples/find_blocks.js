@@ -13,11 +13,9 @@ let blockInfo = BlockInfo.findDescription("Gold Block");
 for (let region of world.getRegions()) {
     console.log(region.xz);
 
-    for (let chunk of region.getChunks()) {
-        for (let blockType of chunk.getBlockInfos()) {
-            if (blockType.type === blockInfo.type && blockType.data === blockInfo.data) {
-                console.log(JSON.stringify(blockType));
-            }
+    for (let blockType of region.getBlockInfos()) {
+        if (blockType.type === blockInfo.type && blockType.data === blockInfo.data) {
+            console.log(JSON.stringify(blockType));
         }
     }
 }
